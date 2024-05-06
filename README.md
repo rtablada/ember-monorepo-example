@@ -22,34 +22,38 @@ To allow a broad set of application set ups this project aims to have
   * Install concurrently in workspace devDependencies
   * Add script to start all `_start:app:*` scripts
   * Add script `_start:app:legacy-app` which runs the regular `start` command for the `legacy-app`
-3. Add Ember 5.x application using `ember-cli@5.8.1`
+4. Add Ember 5.x application using `ember-cli@5.8.1`
   * Run `ember new @my-org/ui --welcome-false -pnpm --directory modern-app --typescript --skip-git --embroider`
-4. Add `modern-app` to PNPM application and global start command
+5. Add `modern-app` to PNPM application and global start command
   1. In `package.json` add script `_start:app:modern-app` which runs the regular `start` command for the `@my-org/ui` app
   2. In `pnpm-workspace.yaml` add `@my-org/ui` (directory) to `packages` list
   3. Update port config in `.ember-cli` files to match README
-5. Add `@my-org/shared-ui` addon and test app using `@embroider/addon-blueprint`
+6. Add `@my-org/shared-ui` addon and test app using `@embroider/addon-blueprint`
   1. Run `ember addon @my-org/shared-ui -b @embroider/addon-blueprint --typescript --skip-git --pnpm --skip-npm --addon-location="addons/shared-ui/package" --test-app-name="test-app-for-shared-ui" --test-app-location="addons/shared-ui/test-app"` (better shown in "Commands")
   2. Add `addons/**/package` and `addons/**/test-app` to pnpm workspace
   3. Run `pnpm i`
-6. Add `@my-org/shared-ui` base addon to workspace start script
+7. Add `@my-org/shared-ui` base addon to workspace start script
   1. **FIX** (add `--preserveWatchOutput`) to `start:types` in addon package script to make sure glint does not clear build output on each build
   2. add script `_start:addons:shared-ui` which runs the regular `start` command for the `@my-org/shared-ui` app
   3. Update `start` to run `_start:apps:*` and `_start:addons:*` with better name/logging
-7. Add `gts` (ember-template-import) to `@my-org/shared-ui` v2 Addon
+8. Add `gts` (ember-template-import) to `@my-org/shared-ui` v2 Addon
   1. Install `@glimmer/component`/`@glimmer/tracking` as dev dependency
   2. Install `ember-template-imports` and prettier plugin with `pnpm add --save-dev ember-template-imports prettier-plugin-ember-template-tag`
   3. Configure eslint/prettier in `@my-org/shared-ui`
-8. Add `gts` (ember-template-import) to `@my-org/ui` Modern Application
+9. Add `gts` (ember-template-import) to `@my-org/ui` Modern Application
   1. Run `npx ember-apply @tcjr/apply-gts`
-8. Add `gjs` (ember-template-import) to `legacy-app`
-  1. Run `npx ember-apply @tcjr/apply-gts`
-9. Start using `@my-org/shared-ui` from `@my-org/ui`
+10. Start using `@my-org/shared-ui` from `@my-org/ui`
   1. Add `dependencies.@my-org/shared-ui: workspace:*` to `@my-org/ui` package.json
   2. Import and use `import Hello from '@my-org/shared-ui/components/hello/component';` in GTS component from `@my-org/ui`
   3. **NOTE** At this point, live-reload from addon changes **DOES NOT WORK**
-10. Use basic `@embroider/broccoli-side-watch` to watch for addon changes in `modern-ui`
-11. Update `@my-org/ui` to using more dynamic Workspace side-watch script from [NullVoxPopuli](https://github.com/embroider-build/embroider/issues/1892#issuecomment-2090856072)
+11. Use basic `@embroider/broccoli-side-watch` to watch for addon changes in `modern-ui`
+12. Update `@my-org/ui` to using more dynamic Workspace side-watch script from [NullVoxPopuli](https://github.com/embroider-build/embroider/issues/1892#issuecomment-2090856072)
+13. Add `gjs` (ember-template-import) to `legacy-app`
+  1. Run `npx ember-apply @tcjr/apply-gts`
+10. Start using `@my-org/shared-ui` from `legacy-app`
+  1. Add `dependencies.@my-org/shared-ui: workspace:*` to `legacy-app` package.json
+  2. Import and use `import Hello from '@my-org/shared-ui/components/hello/component';` in GTS component from `legacy-app`
+  3. Live reload is handled with ember-auto-import watching already!
 
 
 ### Commands (with whitespace)

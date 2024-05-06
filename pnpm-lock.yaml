@@ -413,6 +413,10 @@ importers:
         version: 5.91.0
 
   legacy-app:
+    dependencies:
+      '@my-org/shared-ui':
+        specifier: workspace:*
+        version: link:../addons/shared-ui/package
     devDependencies:
       '@ember/optional-features':
         specifier: ^2.0.0
