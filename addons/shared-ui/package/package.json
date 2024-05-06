@@ -90,6 +90,7 @@
     "@typescript-eslint/parser": "^6.19.1",
     "babel-plugin-ember-template-compilation": "^2.2.1",
     "concurrently": "^8.2.2",
+    "ember-resources": "^7.0.1",
     "ember-template-imports": "^4.1.0",
     "ember-template-lint": "^5.13.0",
     "eslint": "^8.56.0",
@@ -114,7 +115,11 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {
+      "./components/clock.js": "./dist/_app_/components/clock.js",
       "./components/hello/component.js": "./dist/_app_/components/hello/component.js"
     }
+  },
+  "peerDependencies": {
+    "ember-resources": "^7.0.1"
   }
 }

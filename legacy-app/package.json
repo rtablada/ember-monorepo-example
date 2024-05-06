@@ -23,7 +23,8 @@
     "test:ember": "ember test"
   },
   "dependencies": {
-    "@my-org/shared-ui": "workspace:*"
+    "@my-org/shared-ui": "workspace:*",
+    "ember-resources": "^7.0.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",

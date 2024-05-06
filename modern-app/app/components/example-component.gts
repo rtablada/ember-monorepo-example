@@ -1,6 +1,6 @@
-import Hello from '@my-org/shared-ui/components/hello/component';
+import Clock from '@my-org/shared-ui/components/clock';
 
 <template>
-  <Hello />
+  <Clock />
   Hello From Modern App
 </template>
