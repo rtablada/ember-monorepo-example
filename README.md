@@ -54,7 +54,11 @@ To allow a broad set of application set ups this project aims to have
   1. Add `dependencies.@my-org/shared-ui: workspace:*` to `legacy-app` package.json
   2. Import and use `import Hello from '@my-org/shared-ui/components/hello/component';` in GTS component from `legacy-app`
   3. Live reload is handled with ember-auto-import watching already!
-
+11. Use `dependenciesMeta.@my-org/shared-ui.injected: true` to resolve peer dependencies in workspace apps
+  1. **BROKEN LIVE RELOAD** At this point the `@my-org/ui` application will not reload at all when the addon is updated
+    * Even editing files in `@my-org/ui` will not show changes from addon
+  2. **BROKEN LIVE RELOAD** At this point the `legacy-app` will reload but not reflect any changes to the addon
+    * Even editing files in `legacy-app` will not show changes from addon
 
 ### Commands (with whitespace)
 

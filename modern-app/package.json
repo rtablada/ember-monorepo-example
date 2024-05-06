@@ -116,6 +116,11 @@
     "typescript": "^5.4.5",
     "webpack": "^5.91.0"
   },
+  "dependenciesMeta":{
+    "@my-org/shared-ui": {
+      "injected": true
+    }
+  },
   "engines": {
     "node": ">= 18"
   },

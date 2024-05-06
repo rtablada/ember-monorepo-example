@@ -419,7 +419,7 @@ importers:
     dependencies:
       '@my-org/shared-ui':
         specifier: workspace:*
-        version: link:../addons/shared-ui/package
+        version: file:addons/shared-ui/package(@babel/core@7.24.5)(ember-resources@7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@3.28.12(@babel/core@7.24.5)))
       ember-resources:
         specifier: ^7.0.1
         version: 7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@3.28.12(@babel/core@7.24.5))
@@ -538,12 +538,15 @@ importers:
       webpack:
         specifier: ^5.91.0
         version: 5.91.0
+    dependenciesMeta:
+      '@my-org/shared-ui':
+        injected: true
 
   modern-app:
     dependencies:
       '@my-org/shared-ui':
         specifier: workspace:*
-        version: link:../addons/shared-ui/package
+        version: file:addons/shared-ui/package(@babel/core@7.24.5)(ember-resources@7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0)))
       ember-resources:
         specifier: ^7.0.1
         version: 7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0))
@@ -803,6 +806,9 @@ importers:
       webpack:
         specifier: ^5.91.0
         version: 5.91.0
+    dependenciesMeta:
+      '@my-org/shared-ui':
+        injected: true
 
 packages:
 
@@ -2083,6 +2089,11 @@ packages:
   '@ljharb/through@2.3.13':
     resolution: {integrity: sha512-/gKJun8NNiWGZJkGzI/Ragc53cOdcLNdzjLaIa+GEjguQs0ulsurx8WN0jijdK9yPqDvziX995sMRLyLt1uZMQ==}
     engines: {node: '>= 0.4'}
+
+  '@my-org/shared-ui@file:addons/shared-ui/package':
+    resolution: {directory: addons/shared-ui/package, type: directory}
+    peerDependencies:
+      ember-resources: ^7.0.1
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
@@ -11253,6 +11264,24 @@ snapshots:
   '@ljharb/through@2.3.13':
     dependencies:
       call-bind: 1.0.7
+
+  '@my-org/shared-ui@file:addons/shared-ui/package(@babel/core@7.24.5)(ember-resources@7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@3.28.12(@babel/core@7.24.5)))':
+    dependencies:
+      '@embroider/addon-shim': 1.8.7
+      decorator-transforms: 1.2.1(@babel/core@7.24.5)
+      ember-resources: 7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@3.28.12(@babel/core@7.24.5))
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+
+  '@my-org/shared-ui@file:addons/shared-ui/package(@babel/core@7.24.5)(ember-resources@7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0)))':
+    dependencies:
+      '@embroider/addon-shim': 1.8.7
+      decorator-transforms: 1.2.1(@babel/core@7.24.5)
+      ember-resources: 7.0.1(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glimmer/tracking@1.1.2)(@glint/template@1.4.0)(ember-source@5.8.0(@babel/core@7.24.5)(@glimmer/component@1.1.2(@babel/core@7.24.5))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.91.0))
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
