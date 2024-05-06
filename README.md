@@ -59,6 +59,11 @@ To allow a broad set of application set ups this project aims to have
     * Even editing files in `@my-org/ui` will not show changes from addon
   2. **BROKEN LIVE RELOAD** At this point the `legacy-app` will reload but not reflect any changes to the addon
     * Even editing files in `legacy-app` will not show changes from addon
+  3. `pnpm i` manually in console WILL update addon in local project and *WILL* trigger live reload
+12. Attempt to use `pnpm-sync-dependencies-meta-injected` to sync changes from `@my-org/shared-ui` now that `dependenciesMeta.@my-org/shared-ui.injected: true` is set
+  1. **BROKEN LIVE RELOAD** At this point the `@my-org/ui` application will not reload at all when the addon is updated
+    * Even editing files in `@my-org/ui` will not show changes from addon
+  3. `pnpm i` manually in console WILL update addon in local project and *WILL* trigger live reload
 
 ### Commands (with whitespace)
 

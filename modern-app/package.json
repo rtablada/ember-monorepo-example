@@ -12,17 +12,19 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
-    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.css\"",
-    "lint:css:fix": "concurrently \"npm:lint:css -- --fix\"",
-    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "lint:css:fix": "concurrently \"pnpm:lint:css -- --fix\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "lint:types": "glint",
-    "start": "ember serve",
-    "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
+    "_start:sync-workspace": "pnpm sync-dependencies-meta-injected --watch",
+    "_start:ember": "ember serve",
+    "start": "concurrently \"pnpm:_start:*\"",
+    "test": "concurrently \"pnpm:lint\" \"pnpm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test"
   },
   "dependencies": {
@@ -105,6 +107,7 @@
     "eslint-plugin-qunit": "^8.1.1",
     "loader.js": "^4.7.0",
     "package-up": "^5.0.0",
+    "pnpm-sync-dependencies-meta-injected": "^0.0.13",
     "prettier": "^3.2.5",
     "prettier-plugin-ember-template-tag": "^2.0.0",
     "qunit": "^2.20.1",
@@ -116,7 +119,7 @@
     "typescript": "^5.4.5",
     "webpack": "^5.91.0"
   },
-  "dependenciesMeta":{
+  "dependenciesMeta": {
     "@my-org/shared-ui": {
       "injected": true
     }
