@@ -48,6 +48,8 @@ To allow a broad set of application set ups this project aims to have
   1. Add `dependencies.@my-org/shared-ui: workspace:*` to `@my-org/ui` package.json
   2. Import and use `import Hello from '@my-org/shared-ui/components/hello/component';` in GTS component from `@my-org/ui`
   3. **NOTE** At this point, live-reload from addon changes **DOES NOT WORK**
+10. Use basic `@embroider/broccoli-side-watch` to watch for addon changes
+
 
 
 ### Commands (with whitespace)
