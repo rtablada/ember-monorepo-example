@@ -109,6 +109,9 @@
   "ember-addon": {
     "version": 2,
     "type": "addon",
-    "main": "addon-main.cjs"
+    "main": "addon-main.cjs",
+    "app-js": {
+      "./components/hello/template.js": "./dist/_app_/components/hello/template.js"
+    }
   }
 }
