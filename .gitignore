@@ -1,0 +1,47 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+.env
+
+*.log
+
+/Iss45Import
+
+# V2 Temp Files
+/host-web-v2/node_modules
+/host-web-v2/dist
+
+# compiled output
+.env
+/dist/tests
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+.mono
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log*
+yarn-error.log
+testem.log
+
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try
+.vscode
+
+/host-web/out.log
+
+# DS Stores
+.DS_Store
+.DS_Store?
+
+# Local Dev Certs
+dev.crt
+dev.key
+
+**/.mono

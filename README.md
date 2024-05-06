@@ -13,3 +13,6 @@ To allow a broad set of application set ups this project aims to have
 
 1. With `ember-cli@3.28.6` run `ember new legacy-app -sn --no-welcome -sg`
   * This creates a new 3.28 Ember application with non-embroider build tools, no NPM, no welcome page, and no git
+2. Add workspace `package.json` and `pnpm-workspace.yaml` (see "PNPM Configuration" below for full steps and reasoning)
+  1. In `package.json` declare `private: true` and `"packageManager": "pnpm@9.0.2"`
+  2. In `pnpm-workspace.yaml` add `legacy-app` to `packages` list
