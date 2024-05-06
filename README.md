@@ -36,6 +36,11 @@ To allow a broad set of application set ups this project aims to have
   1. **FIX** (add `--preserveWatchOutput`) to `start:types` in addon package script to make sure glint does not clear build output on each build
   2. add script `_start:addons:shared-ui` which runs the regular `start` command for the `@my-org/shared-ui` app
   3. Update `start` to run `_start:apps:*` and `_start:addons:*` with better name/logging
+7. Add `gts` (ember-template-import) to `@my-org/shared-ui` v2 Addon
+  1. Install `@glimmer/component`/`@glimmer/tracking` as dev dependency
+  2. Install `ember-template-imports` and prettier plugin with `pnpm add --save-dev ember-template-imports prettier-plugin-ember-template-tag`
+  3. Configure eslint/prettier in `@my-org/shared-ui`
+
 
 
 ### Commands (with whitespace)

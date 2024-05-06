@@ -28,6 +28,17 @@ module.exports = {
         // Add any custom rules here
       },
     },
+    {
+      files: ['**/*.gts'],
+      parser: 'ember-eslint-parser',
+      plugins: ['ember'],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:ember/recommended',
+        'plugin:ember/recommended-gts',
+      ],
+    },
     // require relative imports use full extensions
     {
       files: ['src/**/*.{js,ts,gjs,gts}'],
