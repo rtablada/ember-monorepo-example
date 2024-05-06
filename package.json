@@ -5,8 +5,9 @@
     "concurrently": "^8.2.2"
   },
   "scripts": {
+    "_start:addons:shared-ui": "pnpm -F @my-org/shared-ui run start",
     "_start:apps:modern-app": "pnpm -F @my-org/ui run start",
     "_start:apps:legacy-app": "pnpm -F legacy-app run start",
-    "start": "concurrently \"pnpm:_start:apps:*\""
+    "start": "concurrently \"pnpm:_start:apps:*\" \"pnpm:_start:addons:*\" --names \"app:,addons:\""
   }
 }

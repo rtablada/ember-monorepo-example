@@ -45,7 +45,7 @@
     "prepack": "concurrently 'pnpm:build:*'",
     "start": "concurrently 'pnpm:start:*'",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
-    "start:types": "glint --declaration --watch",
+    "start:types": "glint --declaration --watch --preserveWatchOutput",
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
   },
   "dependencies": {
