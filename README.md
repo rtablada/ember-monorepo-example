@@ -28,3 +28,7 @@ To allow a broad set of application set ups this project aims to have
   1. In `package.json` add script `_start:app:modern-app` which runs the regular `start` command for the `@my-org/ui` app
   2. In `pnpm-workspace.yaml` add `@my-org/ui` (directory) to `packages` list
   3. Update port config in `.ember-cli` files to match README
+5. Add `@my-org` addon and test app using `@embroider/addon-blueprint`
+  1. Run `ember addon @my-org/shared-ui -b @embroider/addon-blueprint --typescript --skip-git --pnpm --skip-npm --addon-location="addons/shared-ui/package" --test-app-name="test-app-for-shared-ui" --test-app-location="addons/shared-ui/test-app"`
+  2. Add `addons/**/package` and `addons/**/test-app` to pnpm workspace
+  3. Run `pnpm i`

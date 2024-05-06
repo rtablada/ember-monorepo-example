@@ -1,3 +1,5 @@
 packages:
   - 'legacy-app'
   - 'modern-app'
+  - 'addons/**/package'
+  - 'addons/**/test-app'
