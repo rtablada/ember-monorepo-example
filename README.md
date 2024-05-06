@@ -20,3 +20,5 @@ To allow a broad set of application set ups this project aims to have
   * Install concurrently in workspace devDependencies
   * Add script to start all `_start:app:*` scripts
   * Add script `_start:app:legacy-app` which runs the regular `start` command for the `legacy-app`
+3. Add Ember 5.x application using `ember-cli@5.8.1`
+  * Run `ember new @my-org/ui --welcome-false -pnpm --directory modern-app --typescript --skip-git --embroider`
