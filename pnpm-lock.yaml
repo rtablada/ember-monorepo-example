@@ -524,6 +524,10 @@ importers:
         version: 1.6.0
 
   modern-app:
+    dependencies:
+      '@my-org/shared-ui':
+        specifier: workspace:*
+        version: link:../addons/shared-ui/package
     devDependencies:
       '@babel/core':
         specifier: ^7.24.4

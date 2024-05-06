@@ -25,6 +25,9 @@
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test"
   },
+  "dependencies": {
+    "@my-org/shared-ui": "workspace:*"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.4",
     "@ember/optional-features": "^2.1.0",

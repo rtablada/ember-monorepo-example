@@ -40,7 +40,14 @@ To allow a broad set of application set ups this project aims to have
   1. Install `@glimmer/component`/`@glimmer/tracking` as dev dependency
   2. Install `ember-template-imports` and prettier plugin with `pnpm add --save-dev ember-template-imports prettier-plugin-ember-template-tag`
   3. Configure eslint/prettier in `@my-org/shared-ui`
-
+8. Add `gts` (ember-template-import) to `@my-org/ui` Modern Application
+  1. Run `npx ember-apply @tcjr/apply-gts`
+8. Add `gjs` (ember-template-import) to `legacy-app`
+  1. Run `npx ember-apply @tcjr/apply-gts`
+9. Start using `@my-org/shared-ui` from `@my-org/ui`
+  1. Add `dependencies.@my-org/shared-ui: workspace:*` to `@my-org/ui` package.json
+  2. Import and use `import Hello from '@my-org/shared-ui/components/hello/component';` in GTS component from `@my-org/ui`
+  3. **NOTE** At this point, live-reload from addon changes **DOES NOT WORK**
 
 
 ### Commands (with whitespace)
