@@ -5,6 +5,7 @@
     "concurrently": "^8.2.2"
   },
   "scripts": {
+    "_start:apps:modern-app": "pnpm -F @my-org/ui run start",
     "_start:apps:legacy-app": "pnpm -F legacy-app run start",
     "start": "concurrently \"pnpm:_start:apps:*\""
   }

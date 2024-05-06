@@ -1,2 +1,3 @@
 packages:
   - 'legacy-app'
+  - 'modern-app'

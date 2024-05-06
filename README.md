@@ -4,7 +4,9 @@ This is an example project to show some best practices and debugging for using E
 To allow a broad set of application set ups this project aims to have
 
 1. A `legacy-app` which is using Ember 3.28 without Embroider
+  * Served on `http://localhost:4300`
 2. A `@my-org/ui` (directory name `modern-app`) which uses Ember 5.x with Embroider
+  * Served on `http://localhost:4301`
 3. A `@my-org/shared-ui` v2 addon which is usable in both the `legacy-app` and `modern-app`
 4. A `shared-ui-test` package which allows tests for the `shared-ui` addon/library
 5. A `style-guide` application which contains a privately deployable/servable Ember app to use as an internal documentation/styleguide
@@ -22,3 +24,7 @@ To allow a broad set of application set ups this project aims to have
   * Add script `_start:app:legacy-app` which runs the regular `start` command for the `legacy-app`
 3. Add Ember 5.x application using `ember-cli@5.8.1`
   * Run `ember new @my-org/ui --welcome-false -pnpm --directory modern-app --typescript --skip-git --embroider`
+4. Add `modern-app` to PNPM application and global start command
+  1. In `package.json` add script `_start:app:modern-app` which runs the regular `start` command for the `@my-org/ui` app
+  2. In `pnpm-workspace.yaml` add `@my-org/ui` (directory) to `packages` list
+  3. Update port config in `.ember-cli` files to match README
