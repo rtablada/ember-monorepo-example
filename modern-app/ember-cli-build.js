@@ -3,14 +3,14 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const sideWatch = require('@embroider/broccoli-side-watch');
 
-module.exports = async function (defaults) {
+module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
     'ember-cli-babel': { enableTypeScriptTransform: true },
 
     trees: {
-      app: await require('./watch-workspace-addons.cjs').watchLibraries(
-        __dirname,
-      ),
+      app: sideWatch('app', {
+        watching: ['./node_modules/@my-org/shared-ui/dist'],
+      }),
     },
     // Add options here
   });

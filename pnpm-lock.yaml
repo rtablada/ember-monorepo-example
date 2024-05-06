@@ -593,9 +593,6 @@ importers:
       '@glint/template':
         specifier: ^1.4.0
         version: 1.4.0
-      '@pnpm/find-workspace-packages':
-        specifier: ^6.0.9
-        version: 6.0.9(@pnpm/logger@5.0.0)
       '@tsconfig/ember':
         specifier: ^3.0.6
         version: 3.0.6
@@ -773,12 +770,6 @@ importers:
       loader.js:
         specifier: ^4.7.0
         version: 4.7.0
-      package-up:
-        specifier: ^5.0.0
-        version: 5.0.0
-      pnpm-sync-dependencies-meta-injected:
-        specifier: ^0.0.13
-        version: 0.0.13
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -5436,10 +5427,6 @@ packages:
   find-index@1.1.1:
     resolution: {integrity: sha512-XYKutXMrIK99YMUPf91KX5QVJoG31/OsgftD6YoTPAObfQIxM4ziA9f0J1AsqKhJmo+IeaIPP0CFopTD4bdUBw==}
 
-  find-up-simple@1.0.0:
-    resolution: {integrity: sha512-q7Us7kcjj2VMePAa02hDAF6d+MzsdsAWEwYyOpwUtlerRBkOEPBCRZrAV4XfcSN8fHAgaD0hP7miwoay6DCprw==}
-    engines: {node: '>=18'}
-
   find-up@2.1.0:
     resolution: {integrity: sha512-NWzkk0jSJtTt08+FBFMvXoeZnOJD+jTtsRmBYbAIzJdX6l7dLgR7CTubCM5/eDdPUBvLCeVasP1brfVR/9/EZQ==}
     engines: {node: '>=4'}
@@ -7245,10 +7232,6 @@ packages:
     resolution: {integrity: sha512-k3bdm2n25tkyxcjSKzB5x8kfVxlMdgsbPr0GkZcwHsLpba6cBjqCt1KlcChKEvxHIcTB1FVMuwoijZ26xex5MQ==}
     engines: {node: '>=8'}
 
-  package-up@5.0.0:
-    resolution: {integrity: sha512-MQEgDUvXCa3sGvqHg3pzHO8e9gqTCMPVrWUko3vPQGntwegmFo52mZb2abIVTjFnUcW0BcPz0D93jV5Cas1DWA==}
-    engines: {node: '>=18'}
-
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
@@ -7421,11 +7404,6 @@ packages:
 
   pnpm-sync-dependencies-meta-injected@0.0.10:
     resolution: {integrity: sha512-kPcYZLaLgo5WhlgWciCJFqdxprIqaR52cY1C8KH3RGdia1YwT1wO/AOKyvOydNBJmpdcLxka2a0La9CaStxG/A==}
-    engines: {node: '>=16.0.0'}
-    hasBin: true
-
-  pnpm-sync-dependencies-meta-injected@0.0.13:
-    resolution: {integrity: sha512-LH9Oiud3r7xkgIAbNfkze9AA6B3xiY8gPimV8LByc3EWMYlcXEk2IB3O3uz8B5qQ9z4uYeoC0PaS1XAdKR2ExA==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -16792,8 +16770,6 @@ snapshots:
 
   find-index@1.1.1: {}
 
-  find-up-simple@1.0.0: {}
-
   find-up@2.1.0:
     dependencies:
       locate-path: 2.0.0
@@ -18828,10 +18804,6 @@ snapshots:
       registry-url: 5.1.0
       semver: 6.3.1
 
-  package-up@5.0.0:
-    dependencies:
-      find-up-simple: 1.0.0
-
   pako@1.0.11: {}
 
   parallel-transform@1.2.0:
@@ -18972,21 +18944,6 @@ snapshots:
       find-up: 3.0.0
 
   pnpm-sync-dependencies-meta-injected@0.0.10:
-    dependencies:
-      '@pnpm/find-workspace-dir': 6.0.3
-      '@pnpm/find-workspace-packages': 6.0.9(@pnpm/logger@5.0.0)
-      '@pnpm/fs.hard-link-dir': 2.0.1(@pnpm/logger@5.0.0)
-      '@pnpm/logger': 5.0.0
-      '@pnpm/read-project-manifest': 5.0.11
-      debug: 4.3.4(supports-color@9.4.0)
-      fs-extra: 11.2.0
-      proper-lockfile: 4.1.2
-      resolve-package-path: 4.0.3
-      supports-color: 9.4.0
-      watcher: 2.3.1
-      yargs: 17.7.2
-
-  pnpm-sync-dependencies-meta-injected@0.0.13:
     dependencies:
       '@pnpm/find-workspace-dir': 6.0.3
       '@pnpm/find-workspace-packages': 6.0.9(@pnpm/logger@5.0.0)

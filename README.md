@@ -47,7 +47,6 @@ To allow a broad set of application set ups this project aims to have
   2. Import and use `import Hello from '@my-org/shared-ui/components/hello/component';` in GTS component from `@my-org/ui`
   3. **NOTE** At this point, live-reload from addon changes **DOES NOT WORK**
 11. Use basic `@embroider/broccoli-side-watch` to watch for addon changes in `modern-ui`
-12. Update `@my-org/ui` to using more dynamic Workspace side-watch script from [NullVoxPopuli](https://github.com/embroider-build/embroider/issues/1892#issuecomment-2090856072)
 13. Add `gjs` (ember-template-import) to `legacy-app`
   1. Run `npx ember-apply @tcjr/apply-gts`
 10. Start using `@my-org/shared-ui` from `legacy-app`
